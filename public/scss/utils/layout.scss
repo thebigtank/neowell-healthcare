@@ -13,9 +13,18 @@ html {
 
 body {
 	overflow-x: hidden;
-	line-height: 1.4;
-	font-family: $mada;
+	font-family: $nhaasgroetesk;
 	color: $color-1;
+}
+
+p,
+span,
+div {
+	line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1;
 }
 
 a {
