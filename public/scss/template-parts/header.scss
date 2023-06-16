@@ -1,3 +1,56 @@
 .block.header {
-    
+    padding: 0 fluid(10, 40);
+
+    .wrapper {
+        padding: fluid(10, 35) 0 fluid(10, 20) 0;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        border-bottom: 1px solid fade-out($dark, 0.8);
+    }
+
+    .menu {
+        display: flex;
+
+        &:last-child {
+            justify-content: end
+        }
+
+        .hamburger {
+            margin-right: fluid(0, 35);
+        }
+
+        &-left, &-right {
+            @include flex(center, center, wrap);
+            gap: fluid(5, 35);
+
+            @include media('<tablet') {
+                display: none;
+            }
+
+            .menu-item {
+                a {
+                    font-size: fluid(10, 16);
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: rem(2);
+                }
+            }
+        }
+
+        .cart {
+            margin-left: fluid(0, 35);
+            display: flex;
+            align-items: center;
+
+            .ico {
+                width: rem(30);
+            }
+        }
+    }
+
+    .logo {
+        @include ratio(164, 36);
+        width: fluid(120, 164);
+    }
 }

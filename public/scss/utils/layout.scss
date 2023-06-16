@@ -7,14 +7,14 @@
 html {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-	background-color: #fff;
+	background-color: $light;
 	// cursor: none;
 }
 
 body {
 	overflow-x: hidden;
 	font-family: $nhaasgroetesk;
-	color: $color-1;
+	color: $dark;
 }
 
 p,
