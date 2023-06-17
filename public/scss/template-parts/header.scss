@@ -1,6 +1,6 @@
 .block.header {
     background-color: $light;
-    
+
     .wrapper {
         padding-top: fluid(10, 35);
         padding-bottom: fluid(10, 20);
@@ -26,11 +26,11 @@
         }
 
         &-left, &-right {
-            @include flex(center, center, wrap);
-            gap: fluid(5, 35);
-
-            @include media('<tablet') {
-                display: none;
+            display: none;
+            
+            @include media('>tablet') {
+                gap: fluid(5, 35);
+                @include flex(center, center, wrap);
             }
 
             .menu-item {
