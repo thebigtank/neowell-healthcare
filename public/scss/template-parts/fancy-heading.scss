@@ -1,0 +1,52 @@
+.block.fancy-heading {
+    padding-top: fluid(20, 70);
+
+    .heading {
+        font-size: fluid(25, 82);
+        font-weight: 600;
+
+        &-grp {
+            display: flex;
+            align-items: center;
+            gap: fluid(10, 20);
+        }
+
+        &-text {
+            display: block;
+            line-height: 1.3;
+        }
+
+        .fancy-btn {
+            display: none;
+            position: relative;
+            
+            @include media('>490px') {
+                display: flex;
+            }
+
+            .bg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: rem(50);
+                transform: scale(0.95);
+                overflow: hidden;
+                display: none;
+
+                @include media('>phone') {
+                    display: block;
+                }
+
+                img {
+                    object-position: rem(-20) fluid(-70, -100, 'phone');
+                }
+            }
+
+            .btn {
+                @include media('>phone') {
+                    transform: translateX(60%);
+                }
+            }
+        }
+    }
+}
